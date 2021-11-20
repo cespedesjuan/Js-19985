@@ -1,7 +1,6 @@
-var nombre = "Juan"
-var apellido = "Céspedes"
-var edad = "20"
+//let nombreIngresado = prompt("Ingrese su nombre")
+//let apellidoIngresado = prompt("Ingrese su apellido") 
+//let edadIngresada = prompt("Ingrese su edad") 
 
 
-console.log(nombre + " " + apellido + " " + edad)
-console.log(edad)
+console.log("Tu nombre es" + " " + nombreIngresado + " " + apellidoIngresado + " y tenes " + edadIngresada + " años")
