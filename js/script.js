@@ -1,4 +1,4 @@
-//let nombreIngresado = prompt("Ingrese su nombre")
+let nombreIngresado = prompt("Ingrese su nombre")
 //let apellidoIngresado = prompt("Ingrese su apellido") 
 //let edadIngresada = prompt("Ingrese su edad") 
 
