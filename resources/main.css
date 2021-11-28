@@ -42,15 +42,16 @@ body {
 }
 
 .ejercitacion__caja .ejercitacion__displayBox {
-  background: white;
-  height: 250px;
   width: 50%;
   margin-left: 100px;
   margin-top: 50px;
-  border-radius: 10px;
   color: black;
   text-shadow: 1px .5px white;
   margin-bottom: 80px;
+}
+
+.ejercitacion__caja .displayImg {
+  border-radius: 10px;
 }
 
 .ejercitacion__caja .colorA {
