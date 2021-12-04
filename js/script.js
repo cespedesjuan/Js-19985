@@ -1,55 +1,35 @@
-//* ENTREGABLE NR 3
-function ejercicioFor() {
-    let numero = prompt ("Ingrese un numero del 1 al 10");
-    parseInt(numero, 10)
-    for (numero; numero > 0; numero--)
-    alert("Clickeame " + numero + " veces más" )
-}
-
-
+//* ENTREGABLE NR 5 (OBJETOS) [lo puse en una función para que no se trigeree en el liveserver mientras adjunto la entrega 6!]
 function Login() {
-  let username = prompt("Ingrese su nombre de usuario (MÍNIMO 8 CARACTERES)");
-  if (username.length < 8) {
-    return alert(
-      "Tu usuario tiene que tener 8 carácteres mínimo, volvé a intentarlo."
-    );
-  } else if (username.length > 7) {
-        let pin = prompt("Ingrese su PIN (MÍNIMO 6 NÚMEROS)");
-        if (pin.length < 6) {
-            return alert("Tu PIN tiene estar formado por 6 números");
-        }
-        else if (pin.length >= 6); {
-            alert("Login exitoso")
-        }
+    function Usuario (username, password, edad) {
+        this.username = username;
+        this.password = password;
+        this.edad = edad;
     }
+    const usuario1 = new Usuario(prompt("Ingresa un usuario"), prompt("Ingresa una contraseña"), prompt("Ingresa tu edad"));
+    console.log(usuario1)
+    alert("Tu usuario es " + usuario1.username);
+    alert("Tu password es " + usuario1.password);
 }
 
-//* Desafío complementario  con 3 funciones adjuntas
+//* ENTREGABLE NR 6 (INCORPORAR ARRAYS) + 1ERA ENTREGA
+ 
+//* Array que ordena objetos según su edad (1ER Y 2DO DESAFIO DE LA ENTREGA)
 
-function esPar (num) {
-    num = prompt("Ingresa un numero")
-    parseInt(num, 10)
-    if (num % 2 == 0){
-    alert("Es par")
+const listaPersonas = [
+    {nombre: "Marcos", edad: 24},
+    {nombre: "Beatriz", edad: 72},
+    {nombre: "Juan", edad: 20},
+    {nombre: "Ana", edad: 50},
+];
+function comparador (a,b) {
+    if (a.edad < b.edad){
+        return -1;
     }
-    else {
-        alert("Es impar")
+    if (a.edad > b.edad){
+        return 1;
     }
+    return 0;
 }
+listaPersonas.sort(comparador)
+console.log(listaPersonas)
 
-function impuestoGamer (num) {
-    num = prompt("Ingresa el precio del juego que querés comprar")
-    resultado = parseInt(num,10) + (parseInt(num,10) * 0.65)
-    alert(resultado)
-}
-
-function promedio (a,b,c) {
-    a= prompt("Ingresa primera nota")
-    b= prompt("Ingresa segunda nota")
-    c= prompt("Ingresa tercera nota")
-    resultado = (parseInt(a,10) + parseInt(b,10) + parseInt(c,10)) / 3
-    alert("Tu promedio es de " + resultado)
-}
-esPar()
-impuestoGamer()
-promedio()
