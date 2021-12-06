@@ -11,7 +11,7 @@ function Login() {
     alert("Tu password es " + usuario1.password);
 }
 
-//* ENTREGABLE NR 6 (INCORPORAR ARRAYS) + 1ERA ENTREGA
+//* ENTREGABLE NR 6 (INCORPORAR ARRAYS) + Array con interacción de objetos
  
 //* Array que ordena objetos según su edad (1ER Y 2DO DESAFIO DE LA ENTREGA)
 
