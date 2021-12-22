@@ -26,18 +26,21 @@ function compraDeEntradas () {
         let infoSelec = document.createElement("h2")
         infoSelec.innerHTML = "<h2>¡Usted ha elegido ver a Mi Amigo Invencible el día 5 de Enero del año 2022 a las 20:30"
         document.body.appendChild(infoSelec)
+        sessionStorage.setItem("banda", "Mi Amigo Invencible")
     }
     else if (seleccionEntrada === "2") {
         let nuevoArtista = new Artista(nombre = "Las Ligas Menores", fecha = "15/01/2022", horario = "21:30 PM", costo = "900$")
         let infoSelec = document.createElement("h2")
         infoSelec.innerHTML = "<h2>¡Usted ha elegido ver a Las Ligas Menores el día 15 de Enero del año 2022 a las 21:30"
         document.body.appendChild(infoSelec)
+        sessionStorage.setItem("banda", "Las Ligas Menores")
     }
     else if (seleccionEntrada === "3") {
         let nuevoArtista = new Artista(nombre = "Los Besos", fecha = "18/01/2022", horario = "17:00 PM", costo = "600$")
         let infoSelec = document.createElement("h2")
         infoSelec.innerHTML = "<h2>¡Usted ha elegido ver a Los Besos el día 18 de Enero del año 2022 a las 17:00"
         document.body.appendChild(infoSelec);
+        sessionStorage.setItem("banda", "Los Besos")
     }
     else if (seleccionEntrada > 3 || seleccionEntrada < 1 ) {
         return console.log("Ingrese un numero válido")
@@ -47,7 +50,6 @@ function compraDeEntradas () {
         let boton = document.createElement("h3")
         boton.innerHTML = "<h3> La dirección del predio es Tronador 4227<h3>"
         document.body.appendChild(boton);
-        boton1.removeEventListener("click", "boton1")
     })
     }
 
