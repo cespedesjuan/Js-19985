@@ -51,13 +51,45 @@ table {
   position: relative;
   margin-left: 600px;
   top: 50px;
+  color: white;
+  background-color: purple;
+  border: purple 2px;
+  padding: 5px;
+}
+
+#boton2 {
+  position: relative;
+  margin-left: 600px;
+  top: 50px;
+  color: white;
+  background-color: purple;
+  border: purple 2px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#boton3 {
+  position: relative;
+  margin-left: 600px;
+  top: 50px;
+  color: white;
+  background-color: purple;
+  border: purple 2px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.textoDireccion {
+  text-align: right;
+  margin-right: 200px;
+  position: relative;
+  top: 60px;
 }
 
 .alert-success {
-  position: -webkit-sticky;
-  position: sticky;
   width: 20%;
-  top: 463px;
+  top: 262px;
   left: 1085px;
 }
 
@@ -65,7 +97,7 @@ table {
   position: -webkit-sticky;
   position: sticky;
   width: 22%;
-  top: 575px;
+  top: 302px;
   left: 1060px;
 }
 /*# sourceMappingURL=main.css.map */
