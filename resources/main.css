@@ -43,6 +43,11 @@ table {
   margin-left: auto;
 }
 
+.fotoPerrito {
+  margin-left: 600px;
+  margin-top: 100px;
+}
+
 #banda {
   width: 15%;
 }
@@ -52,9 +57,12 @@ table {
   margin-left: 600px;
   top: 50px;
   color: white;
-  background-color: purple;
-  border: purple 2px;
-  padding: 5px;
+  background-color: #EA00D9;
+  border: black 2px;
+  padding: 10px;
+  text-shadow: 2px 1px black;
+  -webkit-box-shadow: 4px 3px 2px #9b5993;
+          box-shadow: 4px 3px 2px #9b5993;
 }
 
 #boton2 {
@@ -62,11 +70,14 @@ table {
   margin-left: 600px;
   top: 50px;
   color: white;
-  background-color: purple;
-  border: purple 2px;
-  padding: 5px;
+  background-color: #EA00D9;
+  border: black 2px;
+  padding: 10px;
   margin-top: 15px;
   margin-bottom: 15px;
+  -webkit-box-shadow: 4px 3px 2px #9b5993;
+          box-shadow: 4px 3px 2px #9b5993;
+  text-shadow: 2px 1px black;
 }
 
 #boton3 {
@@ -85,6 +96,8 @@ table {
   margin-right: 200px;
   position: relative;
   top: 60px;
+  color: white;
+  text-shadow: 2px 1px black;
 }
 
 .alert-success {

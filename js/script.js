@@ -6,16 +6,16 @@ function compraDeEntradas () {
         this.horario = horario;
         this.costo = costo;
     }
-    $("#formBanda").submit(function (e) {
+    $("#formBanda").on("click",function (e) {
         e.preventDefault();
        let seleccionEntrada = $("#banda").val();
        if (seleccionEntrada === "1") {
            let nuevoArtista = new Artista(nombre = "Mi Amigo Invencible", fecha ="05/01/2022", horario = "20:30 PM", costo = "900$");
            $("#formBanda").remove()
            $("table").remove();
-           $("body").append(`<h2>¡Usted ha elegido ver a ${nuevoArtista.nombre} el día 5 de Enero del año 2022 a las 20:30<h2>`)
+           $("body").append(`<h2>¡Usted ha elegido ver a ${nuevoArtista.nombre} el día 5 de Enero del año 2022 a las 20:30</h2>`)
            $("body").append("<div class='botonDiv1'><button id='boton1' class='boton'>DIRECCION DEL LUGAR</button></div>");
-           $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>UBICACIÓN DEL LUGAR</button></div>");
+           $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>foto de perrito</button></div>");
            $("body").append("<div style='display: none' class='alert alert-success' role='alert'>  Compra realizada con éxito!</div>");
            sessionStorage.setItem("banda", "Mi Amigo Invencible")
         }
@@ -25,7 +25,7 @@ function compraDeEntradas () {
             $("table").remove();
             $("body").append("<h2>¡Usted ha elegido ver a Las Ligas Menores el día 15 de Enero del año 2022 a las 21:30</h2>")
             $("body").append("<div class='botonDiv1'><button id='boton1' class='boton'>DIRECCION DEL LUGAR</button></div>");
-            $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>UBICACIÓN DEL LUGAR</button></div>");
+            $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>foto de perrito</button></div>");
             $("body").append("<div style='display: none' class='alert alert-success' role='alert'>  Compra realizada con éxito!</div>")
             sessionStorage.setItem("banda", "Las Ligas Menores")   
         }
@@ -35,7 +35,7 @@ function compraDeEntradas () {
             $("table").remove();
             $("body").append("<h2 style='display: none'>¡Usted ha elegido ver a Los Besos el día 18 de Enero del año 2022 a las 17:00</h2>");
             $("body").append("<div class=' botonDiv1'><button id='boton1' class='boton'>DIRECCION DEL LUGAR</button></div>");
-            $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>UBICACIÓN DEL LUGAR</button></div>");
+            $("body").append("<div class='botonDiv2'><button id='boton2' class='boton'>foto de perrito</button></div>");
             $("body").append("<div style='display: none' class='alert alert-success' role='alert'>  Compra realizada con éxito!</div>");
             sessionStorage.setItem("banda", "Los Besos");
         }
@@ -57,7 +57,21 @@ function compraDeEntradas () {
                 left:400, 
             })
         })
-
+        let GETURL = "https://dog.ceo/api/breeds/image/random"
+        let infoAPI = { message:"", status: ""}
+        $("#boton2").on("click", function() {
+            $.ajax({
+                method: "GET",
+                url:  GETURL,
+                data: infoAPI,
+                success: function(data){
+                    $("body").append(`<div><img class='fotoPerrito' src='${data.message}'></img></div>`);
+                    console.log(data.message)
+                }
+            });    
+            
+        })
     })
 }
 compraDeEntradas()
+// `````
